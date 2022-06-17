@@ -1,10 +1,14 @@
 var Express=require('express')
+var Bodyparser=require('body-parser')
+
 var app=Express()
+app.use(Bodyparser.urlencoded({extended:true}))
+app.use(Bodyparser.json())
 app.get('/',(req,res)=>{
     res.send(" Welcome to my expresspgm nodejs")
 })
 app.post('/read',(req,res)=>{
-    var getName=req.body.name;
+    var getName=req.body.name
     var getRoll=req.body.roll
     res.json(getName + "   "+ getRoll)
 
