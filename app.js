@@ -19,4 +19,6 @@ app.post('/add',(req,res)=>{
     res.json({"result":result})
 }
 )
-app.listen(3000)
+app.listen( process.env.PORT ||  3000,(req,res)=>{
+    console.log("server")
+})
