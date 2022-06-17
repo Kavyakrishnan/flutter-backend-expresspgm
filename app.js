@@ -1,5 +1,8 @@
 var Express=require('express')
 var app=Express()
+app.get('/',(req,res)=>{
+    res.send(" Welcome to my expresspgm nodejs")
+})
 app.post('/read',(req,res)=>{
     var getName=req.body.name;
     var getRoll=req.body.roll
