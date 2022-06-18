@@ -29,7 +29,7 @@ app.post('/add',(req,res)=>{
 app.post('/sub',(req,res)=>{
     var getNum1= parseFloat(req.body.Num1)
     var getNum2=parseFloat(req.body.Num2)
-    var result=getNum1/getNum2
+    var result=getNum1-getNum2
     res.json({"result":result})
 }
 )
