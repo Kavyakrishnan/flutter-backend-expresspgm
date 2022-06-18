@@ -26,6 +26,27 @@ app.post('/add',(req,res)=>{
     res.json({"result":result})
 }
 )
+app.post('/sub',(req,res)=>{
+    var getNum1= parseFloat(req.body.Num1)
+    var getNum2=parseFloat(req.body.Num2)
+    var result=getNum1+getNum2
+    res.json({"result":result})
+}
+)
+app.post('/mul',(req,res)=>{
+    var getNum1= parseFloat(req.body.Num1)
+    var getNum2=parseFloat(req.body.Num2)
+    var result=getNum1+getNum2
+    res.json({"result":result})
+}
+)
+app.post('/div',(req,res)=>{
+    var getNum1= parseFloat(req.body.Num1)
+    var getNum2=parseFloat(req.body.Num2)
+    var result=getNum1+getNum2
+    res.json({"result":result})
+}
+)
 app.listen( process.env.PORT ||  3000,(req,res)=>{
     console.log("server")
 })
