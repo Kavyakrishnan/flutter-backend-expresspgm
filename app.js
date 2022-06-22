@@ -47,6 +47,14 @@ app.post('/div',(req,res)=>{
     res.json({"result":result})
 }
 )
+app.post('/details',(req,res)=>{
+    var getName=req.body.name
+    var getRoll=req.body.roll
+    var getAddress=req.body.address
+    res.json({"name":getName + " " , "roll":getRoll  ,
+    "address":getAddress
+})
+})
 app.listen( process.env.PORT ||  3000,(req,res)=>{
     console.log("server")
 })
